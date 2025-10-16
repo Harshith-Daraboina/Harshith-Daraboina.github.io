@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+        }
+
+        .sidebar {
+            background: #2d3748;
+            color: white;
+            padding: 50px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #f6ad55;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .name {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-size: 18px;
+            color: #f6ad55;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .contact-section {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f6ad55;
+        }
+
+        .contact-item {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #e2e8f0;
+        }
+
+        .contact-item::before {
+            content: "→";
+            color: #f6ad55;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        .skills-section {
+            width: 100%;
+        }
+
+        .skill {
+            margin-bottom: 20px;
+        }
+
+        .skill-name {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #e2e8f0;
+        }
+
+        .skill-bar {
+            height: 8px;
+            background: #4a5568;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #f6ad55 0%, #ed8936 100%);
+            border-radius: 10px;
+            transition: width 1s ease;
+        }
+
+        .main-content {
+            padding: 50px;
+        }
+
+        .quote {
+            background: #2d3748;
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            position: relative;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .quote::before {
+            content: """;
+            font-size: 80px;
+            color: #f6ad55;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-family: Georgia, serif;
+        }
+        .content-section {
+            margin-bottom: 50px;
+        }
+        .content-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+        }
+        .content-title::before {
+            content: "";
+            width: 5px;
+            height: 30px;
+            background: #f6ad55;
+            margin-right: 15px;
+            border-radius: 5px;
+        }
+        .timeline-item {
+            margin-bottom: 30px;
+            padding-left: 30px;
+            border-left: 2px solid #e2e8f0;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            background: #f6ad55;
+            border-radius: 50%;
+            position: absolute;
+            left: -7px;
+            top: 5px;
+        }
+
+        .timeline-year {
+            font-size: 14px;
+            color: #f6ad55;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .timeline-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+
+        .timeline-desc {
+            font-size: 14px;
+            color: #718096;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                padding: 30px 20px;
+            }
+
+            .main-content {
+                padding: 30px 20px;
+            }
+
+            .name {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <img src="https://i.pinimg.com/736x/81/d4/e4/81d4e4e3bcfc5449b4e935d96633445c.jpg" alt="rd" class="profile-img">
+            <div class="name">rd</div>
+            <div class="title">Developer</div>
+
+            <div class="contact-section">
+                <div class="section-title">Contact</div>
+                <div class="contact-item">rohandas@mail.com</div>
+                <div class="contact-item">+12345 67890</div>
+                <div class="contact-item">github.com/rd6260</div>
+                <div class="contact-item">linkedin.com/in/rd</div>
+            </div>
+
+            <div class="skills-section">
+                <div class="section-title">Skills</div>
+                <div class="skill">
+                    <div class="skill-name">Mobile Dev</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">DevOps</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">Golang</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">NextJS</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="quote">
+                Crafting digital experiences with clean code and creative design. Developer for fun. Fuck society personality.
+            </div>
+
+            <div class="content-section">
+                <div class="content-title">Experience</div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2024 - Present</div>
+                    <div class="timeline-title">Senior Developer</div>
+                    <div class="timeline-desc">Leading development of modern mobile applications using cutting-edge technologies. Focused on creating scalable and maintainable solutions.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2023 - 2024</div>
+                    <div class="timeline-title">Mobile Freelance Dev</div>
+                    <div class="timeline-desc">Developed and maintained multiple client projects. Specialized in Flutter, Supabase, and software architecture.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2019 - 2021</div>
+                    <div class="timeline-title">DevOps Engineer</div>
+                    <div class="timeline-desc">Developed and Maintained a scalable architecture for a big project. Focused on Auto Scalling and load management.</div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <div class="content-title">Education</div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2024 - 2028</div>
+                    <div class="timeline-title">BTech in DSAI</div>
+                    <div class="timeline-desc">College is going shit, but hey at least i'm having fun. Focused on software engineering and Machine Learning.</div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <div class="content-title">Awards</div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-title">Best Developer Award</div>
+                    <div class="timeline-desc">Recognized for outstanding contributions to open-source projects and innovative solutions.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
